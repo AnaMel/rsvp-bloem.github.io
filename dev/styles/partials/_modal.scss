@@ -10,6 +10,11 @@
     right: 0;
     left: 0;
 
+    &.second-step{
+        position: inherit;
+        height: 100vh;;
+    }
+
     display: flex;
     justify-content:center;
     align-items: center;
@@ -88,7 +93,7 @@
             display: flex;
             align-items: center;
             @media (max-device-width: 550px){
-                margin-top:15px!important;
+                margin-top:25px!important;
                 margin-bottom: 30px!important;
             }
             .inp{ 

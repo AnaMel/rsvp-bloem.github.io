@@ -49,12 +49,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="body">
-        <div className="mobile">
+      <div className={this.state.isModalOpen ? "body second-step" : "body"}>
+        <div className={this.state.isModalOpen ? "mobile second-step" : "mobile"}>
           <h1 >You are invited to the wedding of</h1>
           <h1 className="names">Danny & Anastasiya</h1>
         </div>
-        <div className="image">
+        <div className={this.state.isModalOpen ? "image second-step" : "image"}>
           <div className="content m-l-30">
             <h1 className="large">You are invited to the wedding of</h1>
             <h1 className="large names">Danny & Anastasiya</h1>
