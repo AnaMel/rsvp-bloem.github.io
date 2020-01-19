@@ -1,11 +1,9 @@
 {
   "name": "react-boilerplate",
+  "homepage": "https://anamel.github.io/rsvp-bloem.github.io/",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,6 +17,7 @@
     "browserify": "^13.3.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
@@ -28,6 +27,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.7.1",
     "react-dnd": "^2.6.0",
     "react-dnd-html5-backend": "^2.6.0",
