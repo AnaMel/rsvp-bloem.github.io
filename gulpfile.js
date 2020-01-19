@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const deploy = require('gulp-gh-pages');
 const babel = require('babelify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
@@ -18,20 +19,20 @@ gulp.task('styles', () => {
 });
 
 gulp.task('js', () => {
-	return browserify('dev/scripts/app.js', {debug: true})
+	return browserify('dev/scripts/app.js', { debug: true })
 		.transform('babelify', {
 			sourceMaps: true,
-			presets: ['env','react']
+			presets: ['env', 'react']
 		})
 		.bundle()
-		.on('error',notify.onError({
+		.on('error', notify.onError({
 			message: "Error: <%= error.message %>",
 			title: 'Error in JS 💀'
 		}))
 		.pipe(source('app.js'))
 		.pipe(buffer())
 		.pipe(gulp.dest('public/scripts'))
-		.pipe(reload({stream:true}));
+		.pipe(reload({ stream: true }));
 });
 
 gulp.task('bs', () => {
@@ -42,8 +43,13 @@ gulp.task('bs', () => {
 	});
 });
 
-gulp.task('default', ['bs','js','styles'], () => {
-	gulp.watch('dev/**/*.js',['js']);
-	gulp.watch('dev/**/*.scss',['styles']);
-	gulp.watch('./public/styles/style.css',reload);
+gulp.task('default', ['bs', 'js', 'styles'], () => {
+	gulp.watch('dev/**/*.js', ['js']);
+	gulp.watch('dev/**/*.scss', ['styles']);
+	gulp.watch('./public/styles/style.css', reload);
+});
+
+gulp.task('deploy', function () {
+	return gulp.src("./**/*")
+		.pipe(deploy())
 });
