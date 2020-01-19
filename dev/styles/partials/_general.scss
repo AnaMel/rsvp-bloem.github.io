@@ -1,0 +1,424 @@
+$accent-colour: #F95836;
+$text-accent-colour:#F6362D;
+$dark-colour: #030E12;
+$background-colour:hsla(183.8, 56.4%, 44.1%, 0.1);
+
+* {
+    margin:0;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+
+    .m-r-30{
+        margin-right: 30px!important;
+    }
+    .m-l-30{
+        margin-left: 30px;
+    }
+    .m-b-0{
+        margin-bottom: 0!important;
+    }
+    .m-b-10{
+        margin-bottom: 10!important;
+    }
+    .m-b-30{
+        margin-bottom: 30px;
+    }
+    .m-b-50{
+        margin-bottom: 50px;
+    }
+    .m-t-30{
+        margin-top: 30px;
+    }
+    .height-75{
+        height: 75px;
+    }
+    .cusrsiveFont {
+        font-family: 'Satisfy'!important;
+    }
+    .important{
+        color: $text-accent-colour;
+    }
+
+}
+
+.body{
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    // background-color: $background-colour;
+
+    .mobile{
+        display: none!important;
+        text-align: center;
+        margin-top: 20px;
+        @media (max-device-width: 785px){
+            display: block!important;
+        }
+        h1 {
+            font-size: 20px;
+            color: $dark-colour;
+            &.names{
+                color: $text-accent-colour;
+            }
+        }
+    }
+
+    .large{
+        display: none!important;
+        @media (min-device-width: 785px){
+            display: block!important;
+        }
+    }
+
+    .image{
+        background-image: url("./flowers.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 100vh;
+
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (max-device-width: 550px){
+            height: 70%;
+        }
+
+        .content{
+            text-align: center;
+
+            @media (max-device-width: 550px){
+                margin-right: 55px;
+                margin-left: 55px;
+                p {
+                    font-size: 14px!important;
+                }
+            }
+
+            h1 {
+                font-size: 35px;
+                color: $dark-colour;
+                &.names{
+                    color: $text-accent-colour;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .rsvp{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                display: flex;
+                margin-top: 50px;
+                p {
+                    margin-right: 20px;
+                }
+                .example_b {
+                    color: #fff !important;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background: #467F7D;
+                    padding: 10px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    border: none;
+                    transition: all 0.4s ease 0s;
+    
+                    width: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+    
+                .example_b:hover {
+                    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+                    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                    transition: all 0.4s ease 0s;
+                }
+
+                @media (max-device-width: 785px){
+                    display: none;
+                }
+            }
+        }
+    }
+    .rsvp-mobile{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        p {
+            margin-right: 20px;
+        }
+        .example_b {
+            color: #fff !important;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #467F7D;
+            padding: 10px;
+            border-radius: 50px;
+            display: inline-block;
+            border: none;
+            transition: all 0.4s ease 0s;
+
+            width: 100px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .example_b:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            transition: all 0.4s ease 0s;
+        }
+
+        @media (min-device-width: 550px){
+            display: none
+        }
+    }
+}
+
+// BUTTON
+
+.button_cont,
+.exit{
+    cursor: pointer;
+}
+
+// CHECKBOXES
+
+.input-title {
+    clear: both;
+    padding: 22px 0px 0px 0px;
+    font-size: 16px;
+    color: $text-accent-colour;
+    font-weight: 300;
+    @media (max-device-width: 550px){
+        padding-top: 10px!important;
+
+    }
+}
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+    display: block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    border: 2px solid salmon;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: white;
+    border-radius: 5px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity:1;
+    border: 2px solid salmon;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid $text-accent-colour;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity:1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+-webkit-transform: rotate(45deg) scale(1);
+-ms-transform: rotate(45deg) scale(1);
+transform: rotate(45deg) scale(1);
+opacity:1;
+left: 8px;
+top: 3px;
+width: 6px;
+height: 12px;
+border: solid $text-accent-colour;
+border-width: 0 2px 2px 0;
+background-color: transparent;
+border-radius: 0;
+}
+
+
+
+/* For Ripple Effect */
+.checkbox-label .checkbox-custom::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    border: 2px solid salmon;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);    
+}
+
+.checkbox-label input:checked ~ .checkbox-custom::before {
+    left: -3px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    opacity:0;
+    z-index: 999;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+/* Style for Circular Checkbox */
+.checkbox-label .checkbox-custom.circular {
+    border-radius: 50%;
+    border: 2px solid salmon;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom.circular {
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid salmon;
+}
+.checkbox-label input:checked ~ .checkbox-custom.circular::after {
+    border: solid $text-accent-colour;
+    border-width: 0 2px 2px 0;
+}
+.checkbox-label .checkbox-custom.circular::after {
+    border-radius: 50%;
+}
+
+.checkbox-label .checkbox-custom.circular::before {
+    border-radius: 50%;
+    border: 2px solid salmon;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom.circular::before {
+    border-radius: 50%;
+}
+
+// INPUT
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    @media (max-device-width: 550px){
+        max-width: 785px;
+
+    }
+  
+    .label {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      font-size: 16px;
+      color: snow;
+      font-weight: 500;
+      transform-origin: 0 0;
+      transition: all 0.2s ease;
+    }
+  
+    .border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: snow;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: all 0.15s ease;
+    }
+  
+    input {
+      -webkit-appearance: none;
+      width: 100%;
+      border: 0;
+      font-family: inherit;
+      padding: 12px 0;
+      height: 48px;
+      font-size: 16px;
+      font-weight: 500;
+      border-bottom: 2px solid #c8ccd4;
+      background: none;
+      border-radius: 0;
+      color: snow;
+      transition: all 0.15s ease;
+  
+      &:hover {
+        // background: rgba(34, 50, 84, 0.03);
+      }
+  
+      &:not(:placeholder-shown) + span {
+        color: snow;
+        transform: translateY(-26px) scale(0.75);
+      }
+  
+      &:focus {
+        background: none;
+        outline: none;
+  
+        + span {
+          color: snow;
+          transform: translateY(-26px) scale(0.75);
+  
+          + .border {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,165 @@
+.modal{
+    *{
+        font-family: 'Raleway', sans-serif;
+    }
+
+    background-color: hsla(192, 71%, 23%, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    .exit{
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white!important;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 20px;
+        border: none;
+        transition: all 0.4s ease 0s;
+        font-family: 'Open Sans', sans-serif;
+
+            @media (max-device-width: 785px){
+                font-size: 15px;
+            }
+        }   
+
+        .exit:hover {
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            transition: all 0.4s ease 0s;
+        }
+
+    // .image{
+    //     background-image: url("./bird.png");
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
+    //     background-position: center;
+    //     height: 300px;
+    //     width: 500px;
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    // }
+
+    .questions {
+        min-width: 600px;
+        font-size: 20px;
+        color: snow;
+        font-weight: 300;
+
+        @media (max-device-width: 785px){
+            // min-width: 200px;
+            // width: 80%!important;
+            // display: flex;
+            // flex-direction: column;
+            // width: 100%;
+            // margin-top: 175px;
+        }
+        @media (max-device-width: 550px){
+            min-width: 200px;
+            width: 80%!important;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            // margin-top: 175px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+            margin-top: 10px;
+            font-size: 26px;
+            color: $text-accent-colour;
+            font-family: 'Satisfy', cursive;
+            @media (max-device-width: 550px){
+                    margin: 0!important;
+                    font-size: 18px!important;
+            }
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            @media (max-device-width: 550px){
+                margin-top:15px!important;
+                margin-bottom: 30px!important;
+            }
+            .inp{ 
+                @media (max-device-width: 550px){
+                    margin-bottom: 10px;
+                    margin-right: 0!important;
+                }
+
+            }
+        }
+        .controls-vertical {
+            @media (max-device-width: 550px){
+                flex-direction: column;
+                margin-bottom: 20px!important;
+                margin-top:10px!important;
+
+            }
+        }
+    }
+
+    .errors{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Satisfy', cursive;
+        color: $dark-colour;
+        font-size: 30px;
+    }
+
+    .thankYou {
+        text-align:center;
+        font-size: 22px;
+        color: white;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .example_b {
+        cursor: pointer;
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #467F7D;
+        padding: 10px;
+        border-radius: 50px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+
+        width: 100px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .example_b:hover {
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        transition: all 0.4s ease 0s;
+    }
+
+    .button_cont {
+        @media (max-device-width: 550px){
+            margin-top: 10px!important;
+            margin-bottom: 10px!important;
+            font-size: 18px;
+            .example_b{
+                width: 60px;
+                padding: 5px;
+            }
+        }
+    }
+}
